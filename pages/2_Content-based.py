@@ -5,7 +5,7 @@ genres = movie_genres_sparse.columns.tolist()
 options = st.multiselect(
     'Select your favorite genre combination:',
     genres,
-    ['Comedy', 'Adventure'])
+    ['Drama', 'Romance'])
 
 
 movie_combo = {genre: 0 for genre in genres}
@@ -18,6 +18,14 @@ for selection in options:
 recommendations = get_recommendations(movie_combo)
 
 names, posters = get_movie_data(recommendations)
+
+
+if not options:
+    st.write("Please select at least one genre to get recommendations.")
+    st.stop()
+
+elif options == ['Romance']:
+    st.write("😏")
 
 col1, col2 = st.columns(2)
 
