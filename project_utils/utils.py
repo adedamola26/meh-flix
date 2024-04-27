@@ -1,6 +1,9 @@
 import pickle
 import os
 import pandas as pd
+import requests
+from io import BytesIO
+from PIL import Image
 from sklearn.metrics.pairwise import cosine_similarity
 
 def get_path(path):
@@ -29,6 +32,12 @@ def truncate_title(title, max_length=1000):
         return title[:max_length] + "..."
     else:
         return title
+
+def get_and_resize_image(url, height):
+    response = requests.get(url)
+    image = Image.open(BytesIO(response.content))
+    image.thumbnail((image.width, height)) 
+    return image
 
 
 def get_neighbours(title, n=10):
