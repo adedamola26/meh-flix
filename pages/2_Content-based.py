@@ -37,11 +37,11 @@ col1, col2 = st.columns(2)
 
 for i in range(5):
     with col1:
-        st.subheader(truncate_title(names[2*i]))
+        st.subheader(names[2*i])
         image = get_and_resize_image(images_url[2*i], 750)
         st.image(image)
         
     with col2:
-        st.subheader(truncate_title(names[2*i+1]))
+        st.subheader(names[2*i+1])
         image = get_and_resize_image(images_url[2*i+1], 750)
         st.image(image)
