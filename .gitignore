@@ -1,2 +1,5 @@
 __pycache__/
 images_750.pkl
+.env/
+surprise/
+new_env/
