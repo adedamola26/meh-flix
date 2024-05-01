@@ -1,9 +1,15 @@
 import streamlit as st
-from project_utils.utils import get_movie_data, truncate_title, movie_genres_sparse, get_recommendations, get_and_resize_image
+from project_utils.utils import get_movie_data, movie_genres_sparse, get_recommendations, get_and_resize_image
 
 st.set_page_config(
     page_title="Content-based", page_icon="🧺", layout = "wide"
 )
+
+st.title("Content Based Recommender System")
+
+st.text("What genres do you like to see your movies fall into?")
+
+
 
 genres = movie_genres_sparse.columns.tolist()
 options = st.multiselect(
