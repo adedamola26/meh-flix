@@ -29,7 +29,7 @@ In other words... people who enjoy the movie you've selected tend to also enjoy 
 
 **PS**:
 - The available movies were produced between 1919 and 2000. 👴
-- The technical details are covered in this [Jupyter Notebook](). 🤓
+- [Click me for technical details](https://github.com/adedamola26/meh-flix2.0?tab=readme-ov-file#nefflix-meh-flix----movie-recommender-system-project). 🤓
             
 You can click on the sidebar to get started! 🚀
 
